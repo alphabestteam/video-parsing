@@ -9,10 +9,10 @@ from functions.size_and_slope_filter import size_and_slope_filter
 
 def main():
     
-    cap = f'car_driving_on_road.mp4'
     
+    cap = cv.VideoCapture('car_driving_on_road.mp4')
     fourcc = cv.VideoWriter_fourcc(*'XVID')
-    
+  
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
