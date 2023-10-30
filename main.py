@@ -19,15 +19,15 @@ def main():
             print("Can't receive frame (stream end?). Exiting ...")
             break
         
-        # ro = roi()
-        # yellow_white = yellow_white_filter(ro)
+        ro = roi(frame)
+        yellow_white = yellow_white_filter(ro)
         # gau = gaussian_blurring(yellow_white)
         # ca = canny(gau)
         # hou = hough(ca)
         # size_slope = size_and_slope_filter(hou)
         
        
-        cv.imshow('frame', ro) 
+        cv.imshow('frame', yellow_white) 
         if cv.waitKey(4) == ord('q'):
             break
         
