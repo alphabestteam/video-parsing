@@ -12,6 +12,7 @@ def canny_algo(car_drivinG_video):
         low_threshold = 50
         high_threshold = 150
         canny_edge_filter = cv2.Canny(frame, low_threshold, high_threshold)
+        frames.append(canny_edge_filter)
         output.write(frame)
         cv2.imshow('original', frame)
         cv2.imshow('edge', canny_edge_filter)
