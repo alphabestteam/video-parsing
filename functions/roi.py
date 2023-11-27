@@ -11,7 +11,7 @@ def roi(frame):
 
         # creating the ROI
         ROI = np.array(
-            [[(120, height-30), (390, 290), (480, 290), (800, height-30)]], dtype=np.int32
+            [[(100, height), (100, 250), (900, 250), (900, height)]], dtype=np.int32
         )
 
         # blacking out the whole image
