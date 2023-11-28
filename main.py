@@ -7,12 +7,11 @@ from functions.canny import canny
 from functions.hough import hough
 from functions.size_and_slope_filter import size_and_slope_filter
 
+
 def main():
-    
-    
-    cap = cv.VideoCapture('car_driving_on_road.mp4')
-    fourcc = cv.VideoWriter_fourcc(*'XVID')
-  
+    cap = cv.VideoCapture("car_driving_on_road.mp4")
+    fourcc = cv.VideoWriter_fourcc(*"XVID")
+
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
@@ -25,18 +24,16 @@ def main():
         # ca = canny(gau)
         # hou = hough(ca)
         # size_slope = size_and_slope_filter(hou)
+
         
        
         cv.imshow('frame', yellow_white) 
         if cv.waitKey(4) == ord('q'):
             break
-        
+
     cap.release()
     cv.destroyAllWindows()
-    
-    
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-    
