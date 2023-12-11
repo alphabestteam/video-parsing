@@ -20,14 +20,14 @@ def main():
         
         ro = roi(frame)
         yellow_white = yellow_white_filter(ro)
-        # gau = gaussian_blurring(yellow_white)
+        gau = gaussian_blurring(yellow_white)
         # ca = canny(gau)
-        hou = hough(yellow_white)
+        #hou = hough(ro)
         # size_slope = size_and_slope_filter(hou)
 
         
        
-        cv.imshow('frame', hou) 
+        cv.imshow('frame', gau) 
         if cv.waitKey(4) == ord('q'):
             break
 
