@@ -17,19 +17,18 @@ def main():
         if not ret:
             print("Can't receive frame (stream end?). Exiting ...")
             break
-        
+
         ro = roi(frame)
         yellow_white = yellow_white_filter(ro)
         gau = gaussian_blurring(yellow_white)
-        # ca = canny(gau)
-        hou = hough(gau)
+        ca = canny(gau)
+        hou = hough(ca)
         # size_slope = size_and_slope_filter(hou)
-
         
-       
-        cv.imshow('frame', hou) 
-        if cv.waitKey(4) == ord('q'):
-            break
+        if hou is not None and hou.shape[0] > 0 and hou.shape[1] > 0:
+            cv.imshow("frame", hou)
+            if cv.waitKey(4) == ord("q"):
+                break
 
     cap.release()
     cv.destroyAllWindows()
