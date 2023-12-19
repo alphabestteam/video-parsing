@@ -1,0 +1,5 @@
+ROI (region of interest) – is a way to focus the interest area allowing the code to be more efficient.
+HSV (Hue, saturation, value) – hue – what color, saturation – how dark it should be, value – the richness of the color. It’s the most user-friendly way to pick a color.
+Gaussian blurring – is a way of getting rid of noise in images. It takes the pixel that we’re trying to blur, and it does a average with the surrounding pixel’s, however it gives a bigger factor to the middle pixel.
+Edge detection algo (canny) – a way of finding the edges of an image.
+line detection algo (Hough) – way to find straight lines in the image by converting dots in the xy table to the ab table. 
