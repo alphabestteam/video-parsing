@@ -24,7 +24,7 @@ def roi(frame):
         region_of_interest_image = cv2.bitwise_and(frame_gray, region_of_interest)
 
         return region_of_interest_image
-       
+
 
 
 # def roi():
